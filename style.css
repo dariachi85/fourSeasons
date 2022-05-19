@@ -1,0 +1,453 @@
+:root {
+  --aquamarine: rgb(127,255,212);
+  --summer:rgb(169, 252, 225);
+  --fall:rgb(255,240,175);
+  --winter:rgb(224,255,255);
+  --spring:rgb(253,237,229);
+  /*text*/
+  --black: rgb(0,0,0);
+  --whitesmoke: rgb(245,245,245);
+  --pink: rgb(239,71,111);
+  --red:rgb(128,0,6);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {  
+  color: var(--black);
+  font-family: 'Nanum Myeongjo', serif; 
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-family: 'Italianno', cursive;
+}
+
+h3 {
+  font-family: 'Babylonica', cursive;  
+  z-index: 998;
+}
+
+p {
+  line-height: 18.29px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+  cursor: crosshair;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: crosshair;
+}
+
+
+/* HEADER */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 50px;
+  background-color:var(--aquamarine);
+  
+
+  font-size: 2rem;
+}
+
+.header__menu {
+  display: grid;
+  grid-template-areas: 
+                      "nav registration";
+  grid-template-columns: 7fr 3fr;
+}
+
+.header__nav{
+  grid-area: nav;  
+}
+
+.header__registration {
+  grid-area: registration;
+} 
+
+.nav__list-item,
+.registration__list-item {
+  transition: font-family 1.5s ease;
+}
+
+.nav__link:hover,
+.registration__link:hover,
+.nav__link:focus,
+.registration__link:focus {
+  font-family: 'Italianno', cursive;
+  font-size: 3.5rem;
+}
+
+/* Nav */
+.nav__list{
+  display: grid;
+  grid-template-areas:
+      "about news products";
+  grid-template-columns: 2fr 2fr 3fr;
+  width: 100%;
+  height: 50px;
+}
+
+.nav__list-item__about {
+  grid-area: about;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__list-item__news {
+  grid-area: news;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+
+  padding-left: 3em;
+}
+
+.nav__list-item__products {
+  grid-area: products;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  position: relative;
+}
+
+.products__list {
+  position: absolute;
+  top: 50px;
+  background-color:var(--aquamarine);
+  display: block;
+  width: 100%;
+
+  visibility: hidden;
+  opacity: 0;
+}
+
+.nav__link:focus + .products__list {
+  visibility: visible;
+  opacity: 1;
+ }
+
+.products__list-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 65px;
+  z-index: 999;
+}
+
+.products__list-items--summer,
+.products__list-items__fall,
+.products__list-items--winter,
+.products__list-items--spring {
+  cursor: crosshair;
+  transition: font-family 1s ease;
+}
+
+.products__list-items--summer:hover {
+  background-color:rgba(169, 252, 225, 0.7);
+}
+
+.products__list-items__fall:hover {
+  background-color:rgba(255,240,175, 0.7);
+}
+
+.products__list-items--winter:hover {
+  background-color: rgba(224,255,255, 0.7);
+}
+
+.products__list-items--spring:hover {
+  background-color:rgba(253,237,229, 0.7);
+}
+
+/* Registration */
+.registration__list {
+  display: grid;
+  grid-template-areas: 
+                      ". sign login";
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  height: 50px;
+}
+
+.registration__list-item__sign {
+  grid-area: sign;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration__list-item__login {
+  grid-area: login;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Menu Button*/
+.header__menu-button {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+
+
+
+/*HERO Section*/
+
+.hero {  
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/hiro.jpg");
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-attachment: fixed;
+}
+
+.hero__title {
+  background-color:rgba(127, 255, 212, 0.7);
+  padding-left: 2.5em; 
+  width: 100%;
+
+  font-size: 9rem;
+  font-weight: 200;
+}
+
+
+
+/*SECTIONs*/
+
+.summer,
+.fall {
+  display: flex;
+  height: 100vh;
+}
+
+/*Left*/
+.summer__background,
+.fall__background { 
+  display: flex;
+  align-items: center;  
+  width: 40%;
+}
+ .summer__title,
+ .fall__title {
+  padding-right: 2em; 
+  text-align: right; 
+  width: 100%;
+
+  font-size: 5rem;
+  font-weight: 200;  
+ }
+
+
+/*Right*/
+.summer__pages,
+.fall__pages {   
+  display: grid;
+  width: 60%;
+  grid-template-areas:
+      "left-top right-top"
+      "left-bottom right-bottom";
+  grid-template-columns: repeat(2, 1fr);
+
+  font-size: 5.5rem;
+}
+
+.summer__accessories,
+.summer__cloth,
+.summer__food,
+.summer__vacation,
+.fall__accessories,
+.fall__cloth,
+.fall__food,
+.fall__vacation {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-attachment: fixed;
+  position: relative;
+
+  transition: all .1s linear;
+}
+
+.summer__accessories:hover::before,
+.summer__cloth:hover::before,
+.summer__food:hover::before,
+.summer__vacation:hover::before,
+.fall__accessories:hover::before,
+.fall__cloth:hover::before,
+.fall__food:hover::before,
+.fall__vacation:hover::before {
+  position: absolute;
+  content: '';
+  background: inherit;
+  left: 3px;
+  right: 3px;
+  top: 3px;
+  bottom: 3px;  
+  filter: blur(3px);  
+}
+
+
+/*Summer*/
+
+/*Left*/
+.summer__background {
+  animation-name: hover-summer;
+  animation-duration: 1s;
+  animation-play-state: paused; 
+  animation-fill-mode: both;   
+}
+
+.summer__background:active,
+.summer__background:focus,
+.summer__background:hover {
+  animation-play-state: running; 
+}
+
+@keyframes hover-summer {
+  /* normal */
+  0% {
+    background-color:var(--summer);
+  }
+  /* hover */
+  100% {
+    background-color:var(--fall);
+  }
+}
+
+/*Right*/
+.summer__accessories {
+  grid-area: left-top;
+  background-image: url("../images/summer_accessories.jpg"); 
+}
+  
+.summer__cloth {
+  grid-area: right-top;
+   background-image: url("../images/summer_cloth.jpg");
+ }
+
+.summer__food {
+  grid-area: left-bottom;
+  background-image: url("../images/summer_food.jpg");
+  }
+
+.summer__vacation {
+  grid-area: right-bottom;
+   background-image: url("../images/summer_vacation.jpg");
+ }
+
+.summer__accessories:hover,
+.summer__cloth:hover,
+.summer__vacation:hover {
+  color:var(--aquamarine);
+}
+
+.summer__food:hover {
+  color:var(--pink);
+}
+
+/*FALL*/
+
+/*Left*/
+.fall__background {
+  animation-name: hover-fall;
+  animation-duration: 1s;
+  animation-play-state: paused; 
+  animation-fill-mode: both;   
+}
+
+.fall__background:active,
+.fall__background:focus,
+.fall__background:hover {
+  animation-play-state: running; 
+}
+
+@keyframes hover-fall {
+  /* normal */
+  0% {
+    background-color:var(--fall);
+  }
+  /* hover */
+  100% {
+    background-color:var(--winter);
+  }
+}
+
+/*Right*/
+.fall__accessories {
+  grid-area: left-top;
+  background-image: url("../images/fall_accessories.jpg"); 
+}
+  
+.fall__cloth {
+  grid-area: right-top;
+   background-image: url("../images/fall_cloth.jpg");
+ }
+
+.fall__food {
+  grid-area: left-bottom;
+  background-image: url("../images/fall_food.jpg");
+  }
+
+.fall__vacation {
+  grid-area: right-bottom;
+   background-image: url("../images/fall_vacation.jpg");
+ }
+
+.fall__accessories,
+.fall__cloth {
+  color:var(--black);
+}
+.fall__accessories,
+.fall__vacation,
+.fall__food {
+  color:var(--whitesmoke);
+}
+
+.fall__accessories:hover,
+.fall__vacation:hover,
+.fall__food:hover {
+  color:var(--aquamarine);
+}
+
+.fall__cloth:hover {
+  color:var(--red);
+}
