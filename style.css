@@ -75,7 +75,7 @@ button {
   background-color:var(--aquamarine);
   
 
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .header__menu {
@@ -103,7 +103,7 @@ button {
 .nav__link:focus,
 .registration__link:focus {
   font-family: 'Italianno', cursive;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
 }
 
 /* Nav */
