@@ -230,7 +230,7 @@ button {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-image: url("../images/hiro.jpg");
+  background-image: url("images/hiro.jpg");
   background-position: center; 
   background-repeat: no-repeat; 
   background-size: cover; 
@@ -356,22 +356,22 @@ button {
 /*Right*/
 .summer__accessories {
   grid-area: left-top;
-  background-image: url("../images/summer_accessories.jpg"); 
+  background-image: url("images/summer_accessories.jpg"); 
 }
   
 .summer__cloth {
   grid-area: right-top;
-   background-image: url("../images/summer_cloth.jpg");
+   background-image: url("images/summer_cloth.jpg");
  }
 
 .summer__food {
   grid-area: left-bottom;
-  background-image: url("../images/summer_food.jpg");
+  background-image: url("images/summer_food.jpg");
   }
 
 .summer__vacation {
   grid-area: right-bottom;
-   background-image: url("../images/summer_vacation.jpg");
+   background-image: url("images/summer_vacation.jpg");
  }
 
 .summer__accessories:hover,
@@ -414,22 +414,22 @@ button {
 /*Right*/
 .fall__accessories {
   grid-area: left-top;
-  background-image: url("../images/fall_accessories.jpg"); 
+  background-image: url("images/fall_accessories.jpg"); 
 }
   
 .fall__cloth {
   grid-area: right-top;
-   background-image: url("../images/fall_cloth.jpg");
+   background-image: url("images/fall_cloth.jpg");
  }
 
 .fall__food {
   grid-area: left-bottom;
-  background-image: url("../images/fall_food.jpg");
+  background-image: url("images/fall_food.jpg");
   }
 
 .fall__vacation {
   grid-area: right-bottom;
-   background-image: url("../images/fall_vacation.jpg");
+   background-image: url("images/fall_vacation.jpg");
  }
 
 .fall__accessories,
